@@ -21,7 +21,7 @@ def GoogleCalendarRedirectView(request):
 
     flow = Flow.from_client_secrets_file(
         settings.GOOGLE_CALENDAR_API_CREDENTIALS,
-        redirect_uri='http://127.0.0.1:8000/rest/v1/calendar/redirect/',
+        redirect_uri=request.build_absolute_uri('/rest/v1/calendar/redirect/'),
         scopes = SCOPES,
         state=state
     )
@@ -76,7 +76,7 @@ def GoogleCalendarInitView(request):
     flow = Flow.from_client_secrets_file(
        settings.GOOGLE_CALENDAR_API_CREDENTIALS,
         scopes = SCOPES,
-        redirect_uri='http://127.0.0.1:8000/rest/v1/calendar/redirect/'
+        redirect_uri=request.build_absolute_uri('/rest/v1/calendar/redirect/')
     )
     # print(flow)
     authorization_url, state = flow.authorization_url(access_type='offline')
