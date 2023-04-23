@@ -20,7 +20,7 @@ This Django backend provides an authentication and API integration with Google C
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/google-calendar-backend.git
+git clone https://github.com/samaksha/EventFlow.git
 ```
 2. Install the required packages:
 ```bash
