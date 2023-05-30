@@ -40,3 +40,4 @@ python manage.py migrate
 python manage.py runserver
 ```
 6. Access the backend at http://localhost:8000/ in your web browser.
+
